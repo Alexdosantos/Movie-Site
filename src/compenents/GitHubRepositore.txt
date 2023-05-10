@@ -1,0 +1,4 @@
+Para inicializar um novo repositório 
+
+- git init
+- git add -A

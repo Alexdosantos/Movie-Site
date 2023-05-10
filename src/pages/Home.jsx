@@ -3,6 +3,8 @@ import CardMovie from "../compenents/CardMovies"
 const moviesURL = import.meta.env.VITE_API
 const apiKey = import.meta.env.VITE_API_KEY
 
+import "./Home.css"
+
 const Home =() => {
    const  [topMovies , setTopMovies] =  useState ([])
 
@@ -23,9 +25,9 @@ const Home =() => {
 
 
     return (
-    <div className="cotainer">
+    <div className="container">
         <h2 className="titulo">Melhores Filmes</h2>
-        <div className="movies-conteiner">
+        <div className="movies-container">
             {topMovies.length === 0 && <p>Carreganco...</p>}
             {topMovies.length > 0 && topMovies.map((movie)=> <CardMovie key={movie.id} movie={movie} />)}
         </div>
