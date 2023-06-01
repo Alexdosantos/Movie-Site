@@ -5,11 +5,15 @@ import "./Navbar.css"
 
 const Navbar = () => {
     const [search ,setSearch] = useState("")
-    const navegar = useNavigate()
+    const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(search)
+
+        if(!search) return
+        navigate(`/search?q=${search}`)
+        setSearch(" ")
     }
 
     return (
@@ -23,7 +27,7 @@ const Navbar = () => {
             <form onSubmit={handleSubmit}>
 
                 <input type="text" placeholder="Pesquise um Filme" 
-                onChange={(e) => setSearch(e.target.value).target.value}
+                onChange={(e) => setSearch(e.target.value)}
                 value ={search}
                 />
                 
