@@ -1,8 +1,5 @@
 //ICONES E ROTAS//
-npm install react-icons  react-router-dom
+npm install react-icons  
+npm  react-router-dom
 
 
-// VIDEO AULA //
-
-https://www.youtube.com/watch?v=XqxUHVVO7-U&t=777s
-TIME: 27:44S
